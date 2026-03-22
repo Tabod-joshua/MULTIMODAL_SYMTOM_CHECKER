@@ -1,0 +1,23 @@
+services:
+  dermlip:
+    build: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - hf_cache:/root/.cache/huggingface
+      - ./conditions.txt:/app/conditions.txt:ro # edit this file, restart container, done!
+      - ./clinical_kb.json:/app/clinical_kb.json:ro # deterministic medical data
+      - ./hierarchy_map.json:/app/hierarchy_map.json:ro # super-category bucketing for hierarchical classification
+      - ./app.py:/app/app.py:ro # hot-reload app code without rebuild
+
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [ gpu ]
+    restart: "no"
+
+volumes:
+  hf_cache:

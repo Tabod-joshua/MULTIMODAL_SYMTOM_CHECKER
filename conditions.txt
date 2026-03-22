@@ -1,0 +1,422 @@
+# DermLIP Skin Conditions Database — CLIP-Optimized Edition
+#
+# FORMAT RULES (for maximum CLIP/DermLIP accuracy):
+#   1. Most visually distinctive feature FIRST (CLIP weights early tokens heavily)
+#   2. Then: color → texture → morphology → body location → unique differentiators
+#   3. One condition per line. Lines starting with # are comments (ignored by server).
+#   4. Be specific. "honey-colored crust" beats "skin problem".
+#   5. Include what makes it DIFFERENT from similar conditions.
+#
+# HOW TO ADD A NEW CONDITION:
+#   Ask: "What would make a doctor immediately recognize this in a photo?"
+#   Put that answer at the START of the line.
+#
+# ─────────────────────────────────────────────────────────────────────────────
+# Structure: condition-name | key visual anchor | color/texture | location | differentiators
+# ─────────────────────────────────────────────────────────────────────────────
+
+
+# ════════════════════════════════════════════════════════════════════════════
+#  SECTION 1: FUNGAL INFECTIONS
+# ════════════════════════════════════════════════════════════════════════════
+
+# --- Tinea (Dermatophytoses) ---
+# CLIP anchor: ring shape + scaly border + central clearing
+tinea corporis — circular ring-shaped scaly red patch with a raised border and clear center, also known as body ringworm
+tinea capitis — scaly patch of hair loss on the scalp with broken hairs and gray scales, common in children
+tinea pedis — peeling, cracked, and scaly skin between the toes, also known as athlete's foot
+tinea cruris — half-moon shaped red-brown scaly patch on the inner thigh, also known as jock itch
+tinea unguium — thick, yellow-brown, and brittle nail with crumbling debris underneath
+tinea versicolor — small, discolored patches (lighter or darker) with fine scales, usually on the chest and back
+
+# --- Other fungi ---
+# CLIP anchor: unusual shape/color not matched by common conditions
+candidiasis — bright red, moist skin with small white bumps, typically in skin folds
+oral thrush candidiasis — white, creamy patches on the tongue and inside of the mouth
+deep fungal mycetoma — chronic foot swelling with draining sores that release colored particles
+chromoblastomycosis — slow-growing, warty, cauliflower-like bump, usually on the lower leg
+sporotrichosis — a chain of bumps that appear in a line along a lymphatic channel, often after a rose thorn prick
+
+
+# ════════════════════════════════════════════════════════════════════════════
+#  SECTION 2: PARASITIC INFESTATIONS
+# ════════════════════════════════════════════════════════════════════════════
+
+# CLIP anchor: tracks / burrows / geometric pattern
+scabies — very itchy, S-shaped tracks between the fingers, on the wrist, or on the genitals
+cutaneous larva migrans — winding, snake-like red track on the foot that moves a few millimeters per day
+pediculosis capitis — small white eggs (nits) attached to hair shafts near the scalp, causing itching
+tungiasis jigger flea — black dot inside a swollen white ring, usually on the tip of a toe or the sole of the foot
+onchocerciasis — firm bumps under the skin with rough, thick, and itchy dark skin, sometimes with patches of lighter skin
+loiasis — temporary swelling and a visible worm moving across the white of the eye
+lymphatic filariasis — severe swelling and thickened, warty skin on a lower limb, creating a "mossy" texture
+myiasis — swollen, boil-like bump with a central opening, where a botfly larva is present
+cutaneous leishmaniasis — painless sore with a raised, crater-like border that leaves a scar
+
+
+# ════════════════════════════════════════════════════════════════════════════
+#  SECTION 3: BACTERIAL INFECTIONS
+# ════════════════════════════════════════════════════════════════════════════
+
+# CLIP anchor: color of exudate + border definition
+impetigo — thick, honey-colored golden crust on a red base, often around the mouth or nose
+bullous impetigo — large, fragile blisters with a thin, collapsed roof and a scalloped scale at the edge
+cellulitis — warm, red, swollen, and tender skin that spreads, without a clear border, usually on the lower leg
+erysipelas — bright red, raised, and hot patch with a sharp border, often on the face or lower leg
+folliculitis — small, dome-shaped pustule with a red halo around a hair follicle
+furuncle boil — tender, fluctuant red abscess with a pus-filled center, on hairy skin
+carbuncle — deep, multi-headed abscess with several openings for pus to drain, often on the back of the neck
+erythrasma — brown, scaly patch in a skin fold that glows coral-red under a Wood's lamp
+tropical ulcer — deep, painful ulcer with a sloughing base and ragged edges, usually on the lower leg
+Buruli ulcer — large, painless, open ulcer with wide, undermined edges
+leprosy tuberculoid — single, light-colored patch with a raised edge and no feeling, indicating nerve damage
+leprosy lepromatous — multiple, widespread nodules on the face, earlobes, and limbs, causing a "lion-like" appearance
+
+
+# ════════════════════════════════════════════════════════════════════════════
+#  SECTION 4: VIRAL INFECTIONS
+# ════════════════════════════════════════════════════════════════════════════
+
+# CLIP anchor: vesicle morphology + distribution pattern
+herpes zoster shingles — a painful, one-sided band of small, grouped blisters on a red base
+herpes simplex cold sore — a tight cluster of tiny, clear blisters on a red base, typically at the lip's border
+chickenpox varicella — a widespread rash with a mix of flat spots, raised bumps, and crusted blisters all at once
+molluscum contagiosum — a smooth, pearly white, dome-shaped bump with a small, central dimple
+wart verruca vulgaris — a rough, cauliflower-like growth with small, black dots (clotted blood vessels)
+plantar wart verruca plantaris — a flat, hard growth on the sole of the foot with black dots, which interrupts the skin lines
+hand foot mouth disease — oval, gray blisters on the palms and soles, along with sores in the mouth
+measles morbilliform — a flat, red rash that starts on the face and spreads down to the trunk, with small white spots inside the mouth
+molluscum giant HIV — large, multiple, and clustered bumps with a central dimple, often on the face of a person with a weakened immune system
+
+
+# ════════════════════════════════════════════════════════════════════════════
+#  SECTION 5: ACNE AND PILOSEBACEOUS DISORDERS
+# ════════════════════════════════════════════════════════════════════════════
+
+# CLIP anchor: comedone type + location + absence/presence of inflammation
+# NOTE: Acne vs Rosacea is the hardest pair — key differentiator = comedones (acne YES, rosacea NO)
+acne vulgaris — a mix of blackheads, whiteheads, and pimples on oily skin
+acne comedonal — multiple blackheads and whiteheads with very little inflammation
+acne inflammatory papulopustular — red, inflamed pimples on oily skin, but without blackheads
+cystic acne hormonal — deep, painful, red bumps and cysts, often on the jawline and chin
+acne keloidalis nuchae — small, hard bumps and pimples on the back of the neck and hairline, which can lead to scarring
+rosacea erythematotelangiectatic — persistent redness and visible blood vessels in the center of the face, with no blackheads
+rosacea papulopustular — red, flushed face with pimples, but no blackheads
+rhinophyma — enlarged, red, and bulbous nose with thick, pitted skin
+perioral dermatitis — small, red bumps around the mouth, with a clear area right next to the lips
+hidradenitis suppurativa — painful, deep bumps and abscesses in the armpits and groin, which can lead to scarring and tunnels under the skin
+pseudofolliculitis barbae — ingrown hairs in the beard area that cause bumps and pimples, common in Black skin
+
+
+# ════════════════════════════════════════════════════════════════════════════
+#  SECTION 6: ECZEMA AND INFLAMMATORY DERMATOSES
+# ════════════════════════════════════════════════════════════════════════════
+
+# CLIP anchor: itch pattern + skin texture + body site
+atopic dermatitis eczema — dry, itchy, red, and scaly skin, especially in the creases of the elbows and knees
+contact dermatitis — a rash that matches the shape of an object that touched the skin, often red, oozing, and weeping
+seborrheic dermatitis — greasy, oily, yellow-white scales on a red base, common on the scalp, eyebrows, and sides of the nose
+nummular eczema discoid — round, coin-shaped, oozing, and crusted red patches, usually on the arms and legs
+dyshidrotic eczema pompholyx — small, clear, very itchy blisters deep in the skin of the palms and sides of the fingers
+prickly heat miliaria rubra — tiny red bumps on sweaty areas like the neck and trunk, causing a prickling sensation
+papular urticaria — recurring crops of small, red, itchy bumps on exposed limbs, resembling insect bites in children
+photodermatitis — a red or blistering rash that appears only on skin exposed to the sun
+drug morbilliform eruption — a widespread, symmetric, pink-red rash that appears after starting a new medication
+fixed drug eruption — a dusky red or brown, round or oval patch that reappears in the same spot each time a specific drug is taken
+
+
+# ════════════════════════════════════════════════════════════════════════════
+#  SECTION 7: PSORIASIS AND LICHENOID DISORDERS
+# ════════════════════════════════════════════════════════════════════════════
+
+# CLIP anchor: scale color + plaque border sharpness
+psoriasis plaque — thick, silver-white, scaly, well-defined red patches on elbows, knees, and scalp
+psoriasis guttate — small, drop-shaped, salmon-pink bumps with fine scales scattered on the trunk, often after an infection
+psoriasis pustular — collections of sterile yellow pus bumps on fiery red skin, either widespread or localized
+psoriasis palmoplantar — thick, yellow scaling with or without pus bumps on the palms and soles
+inverse psoriasis — smooth, shiny, red patches in skin folds without scales, such as in the armpits, groin, or under the breasts
+lichen planus — flat-topped, purple, polygonal bumps with fine white lines on the inner wrists
+lichen planus oral — a net-like white pattern on the inside of the cheeks or an erosive form
+lichen nitidus — tiny, shiny, flat-topped, flesh-colored bumps clustered on the penis or trunk
+pityriasis lichenoides chronica PLC — small, reddish-brown bumps with a mica-like scale, on the upper trunk and arms
+lichen simplex chronicus — thick, leathery patches with exaggerated skin lines, caused by chronic scratching
+
+
+# ════════════════════════════════════════════════════════════════════════════
+#  SECTION 8: URTICARIA AND BLISTERING DISORDERS
+# ════════════════════════════════════════════════════════════════════════════
+
+urticaria hives — raised, red, itchy welts with a pale center that appear and disappear quickly
+angioedema — diffuse, deep swelling of the lips, eyelids, or tongue that does not pit when pressed, is sudden, pale, large, and not itchy
+bullous pemphigoid — tense, large, intact blisters on a red, itchy base, typically seen in the elderly
+pemphigus vulgaris — fragile blisters that easily rupture, leaving painful sores on the skin and in the mouth
+epidermolysis bullosa — blisters that form with minimal friction or pressure, often on the hands and feet, leaving small white scars
+hailey hailey disease — recurrent, raw, eroded patches in the armpits and skin folds, often familial
+stevens johnson syndrome TEN — widespread, painful skin detachment with sheet-like peeling and sores in the mouth and eyes
+erythema multiforme — target-shaped lesions with three zones: a central dark blister or crust, surrounded by a red ring, then a pale ring, often on the palms
+
+
+# ════════════════════════════════════════════════════════════════════════════
+#  SECTION 9: AUTOIMMUNE AND CONNECTIVE TISSUE DISEASES
+# ════════════════════════════════════════════════════════════════════════════
+
+# CLIP anchor: distinctive distribution pattern
+lupus malar rash — a butterfly-shaped red rash over the nose and both cheeks, sparing the folds around the nose and mouth
+lupus discoid — adherent, scarring, disc-shaped patches with hyperpigmented borders and a central scar
+lupus subacute cutaneous — a photosensitive annular or papulosquamous rash on the chest and shoulders
+dermatomyositis — a purple rash around the eyes, with Gottron papules on the knuckles and a V-neck shaped rash on the chest
+scleroderma systemic — tight, shiny, hardened skin with salt-and-pepper pigment, finger stiffness, and Raynaud's phenomenon
+morphea localized — a waxy, ivory, firm, hardened patch with a lilac ring border, localized scleroderma
+lichen sclerosus — thin, porcelain-white, crinkled skin in the genital or perineal area
+psoriatic arthritis skin — psoriasis-like patches with nail pitting, separation of the nail from its bed, and joint involvement
+sarcoidosis skin — purple, hardened, firm patches or annular bumps on the face, such as on the nose and cheeks
+vasculitis leukocytoclastic — palpable purple spots (purpura) or non-blanching red-purple bumps on the lower legs
+
+
+# ════════════════════════════════════════════════════════════════════════════
+#  SECTION 10: PIGMENTATION DISORDERS
+# ════════════════════════════════════════════════════════════════════════════
+
+# CLIP anchor: color contrast + border sharpness
+vitiligo — chalk-white, completely depigmented patches with sharp, convex borders
+melasma chloasma — symmetric brown patches on the cheeks, forehead, and upper lip, often blotchy and hormonal
+post-inflammatory hyperpigmentation PIH — flat, dark brown discoloration after healed acne or injury
+ochronosis exogenous — blue-grey to black, soot-like discoloration on the cheeks, often from overuse of skin-lightening creams
+acanthosis nigricans — dark, velvety, thickened skin in folds like the neck and armpits
+urticaria pigmentosa mastocytosis — tan-brown spots that swell and become red and itchy when rubbed
+albinism — uniformly white, pale skin and hair with pink eyes, due to a lack of pigment
+drug pigmentation — grey-blue or brown spots that persist after taking certain medications
+lentigo simplex — flat, dark brown, evenly pigmented oval spot
+solar lentigo — flat, brown "age spots" on sun-exposed areas like the face and hands, due to UV damage
+
+
+# ════════════════════════════════════════════════════════════════════════════
+#  SECTION 11: BENIGN TUMORS AND GROWTHS
+# ════════════════════════════════════════════════════════════════════════════
+
+# CLIP anchor: surface texture + attachment style
+seborrheic keratosis — a 'stuck-on' warty, waxy brown growth with a rough surface
+dermatofibroma — a small, firm, brown bump under the skin that dimples when pinched
+melanocytic nevus common mole — a well-defined, symmetric, round, brown, flat or dome-shaped bump with even pigment
+compound nevus — a raised, brown, dome-shaped bump with a smooth surface
+congenital nevus — a large, hairy, brown patch present from birth
+halo nevus sutton — a central brown mole surrounded by a perfectly white ring of depigmented skin
+dysplastic atypical nevus — an asymmetric mole with an irregular, notched border and varied color
+becker nevus — a large, irregular, flat or hairy, dark tan patch, typically on the shoulder or chest of young males
+spitz nevus — a smooth, pink or red, dome-shaped bump, often seen in children
+skin tag acrochordon — soft, flesh-colored, hanging growths with a thin stalk, commonly on the neck, armpits, or eyelids
+lipoma — a soft, rubbery, movable fatty lump under the skin, with normal overlying skin
+epidermoid cyst — a dome-shaped lump under the skin with a central pore, containing cheesy, keratin material
+pilar trichilemmal cyst — a firm, smooth, pearly cyst on the scalp without a central pore
+milia — tiny, white, pearly, dome-shaped bumps filled with keratin, common on the face of newborns or adults
+syringoma — multiple small, flesh-colored or yellowish bumps, often around the lower eyelids
+fordyce spots — multiple small, whitish-yellow spots on the lip border or inside the cheek
+granuloma annulare — ring-shaped, flesh-colored, non-scaly bumps, often on the back of the hand or knuckles
+pyogenic granuloma — a bright red, rapidly growing, fragile, vascular lump that bleeds easily
+neurofibromatosis type 1 — multiple soft, rubbery bumps, light brown spots, and freckling in the armpits
+juvenile xanthogranuloma — a yellow-orange, firm, dome-shaped bump on the face or scalp of an infant
+xanthomas xanthelasma — yellow, lipid-filled soft patches on the eyelids or tendons
+port wine stain — a flat, unilateral, red-purple birthmark on the face that does not fade
+lymphangioma — grouped, clear, vesicle-like, soft, compressible, skin-colored cysts
+pilomatricoma — a hard, calcified lump under the skin, often on the cheek of a child
+mucous cyst digital myxoid — a translucent, dome-shaped cyst at the last joint of the finger, near the nail
+
+
+# ════════════════════════════════════════════════════════════════════════════
+#  SECTION 12: SKIN CANCERS AND PRECANCERS
+# ════════════════════════════════════════════════════════════════════════════
+
+# CLIP anchor: ABCDE for melanoma; border/surface for others
+melanoma malignant — an asymmetric, multicolored (black, brown, red, white, blue) lesion with an irregular border
+superficial spreading melanoma — a flat, multicolored patch with an irregular, scalloped border that grows outwards
+nodular melanoma — a rapidly growing, blue-black, dome-shaped lump that may bleed
+lentigo maligna — a slow-growing, flat, irregularly pigmented tan-brown patch on sun-damaged skin of the elderly
+acral lentiginous melanoma — an irregularly pigmented lesion under the nail or on the palm or sole, common in darker skin types
+basal cell carcinoma nodular — a pearly, translucent lump with a rolled, shiny border and a central open sore
+basal cell carcinoma morpheaform — a scar-like, pale, firm, flat, and infiltrating patch that can be easily missed
+basal cell carcinoma superficial — a thin, red, scaly patch with a thread-like, pearly border, usually on the trunk
+squamous cell carcinoma — a thick, hardened, crusted, and non-healing sore or lump on sun-damaged skin
+actinic keratosis — a rough, sandpaper-like, pink-red, scaly patch on sun-damaged skin of the face, scalp, or hands
+kaposi sarcoma — a reddish-purple, flat or lumpy vascular lesion, often on the lower legs, associated with HIV
+mycosis fungoides CTCL — an irregular, scaly, eczema-like patch or plaque, sometimes with mottled skin
+merkel cell carcinoma — a pink, dome-shaped, rapidly growing, firm lump on sun-exposed skin of the head or neck in the elderly
+lentigo maligna melanoma — an invasive component within a lentigo maligna, on sun-damaged skin of the elderly with an irregular shape
+sebaceous carcinoma — a yellow or flesh-colored, firm lump on the eyelid, sometimes mistaken for a stye
+
+
+# ════════════════════════════════════════════════════════════════════════════
+#  SECTION 13: SCARS, STRUCTURAL AND INHERITED DISORDERS
+# ════════════════════════════════════════════════════════════════════════════
+
+# CLIP anchor: ABCDE for melanoma; border/surface for others
+keloid — a firm, rubbery, shiny raised scar that extends beyond the original wound area
+hypertrophic scar — a raised, firm, red scar that stays within the boundaries of the original wound
+atrophic scar — depressed, pitted, or indented skin, like ice-pick or boxcar scars, typically after acne or chickenpox
+striae distensae rubrae — fresh, red-purple linear streaks from skin stretching, found on the abdomen, thighs, or breasts
+striae distensae albae — old, white, silver, linear, atrophic streaks, also known as mature stretch marks
+prurigo nodularis — very itchy, firm, dome-shaped, crusted bumps with scratch marks, usually symmetrical on the arms and legs
+neurodermatitis lichen simplex — intensely itchy, thickened, leathery patches with exaggerated skin lines, caused by chronic rubbing
+ichthyosis vulgaris — generalized dry, fish-scale-like skin on the arms and legs, worse in winter
+keratosis pilaris — rough, follicular, keratotic, plugged bumps that resemble goosebumps, on the upper arms, thighs, and cheeks
+dariers disease — greasy, crusted, warty, yellow-brown bumps in oil-rich areas, with a V-shaped notch on the nails
+ehlers danlos syndrome — very stretchy, velvety skin that bruises easily, with fragile, atrophic, cigarette-paper-like scars
+tuberous sclerosis — ash-leaf shaped light spots, angiofibromas on the nose and cheeks, a shagreen patch, and growths around the nails
+neurofibromatosis — multiple soft, rubbery bumps, light brown spots, and freckling in the armpits
+incontinentia pigmenti — swirling, dark streaks following specific skin lines, appearing after a blistering stage
+epidermal nevus linear — a linear, warty, brown, keratotic streak following specific skin lines, present from birth
+aplasia cutis — a round or oval area of missing skin on scalp exposing raw tissue, present from birth
+xeroderma pigmentosum — extreme sun sensitivity with multiple dark spots and early skin cancers
+ichthyosis lamellar — generalized large, brown, plate-like scales covering the entire body, present from birth
+
+
+# ════════════════════════════════════════════════════════════════════════════
+#  SECTION 14: HAIR AND NAIL DISORDERS
+# ════════════════════════════════════════════════════════════════════════════
+
+# CLIP anchor: scalp pattern + nail morphology
+alopecia areata — a smooth, completely bald, well-defined round or oval patch, with 'exclamation-mark' hairs at the edges
+alopecia totalis universalis — complete loss of all scalp or body hair, resulting in smooth, shiny baldness
+traction alopecia — a receding hairline at the front and temples with short, broken hairs, caused by tight hairstyles
+androgenetic alopecia male — bitemporal recession and thinning at the crown, following the Hamilton-Norwood pattern
+androgenetic alopecia female — diffuse thinning at the crown with a widening midline part, following the Ludwig pattern
+tinea capitis — a scaly, bald patch with broken black-dot hairs, sometimes with a boggy, inflamed mass, common in children
+paronychia acute — a swollen, red, and extremely tender nail fold with pulsating pus
+paronychia chronic — a thickened, boggy nail fold with loss of the cuticle, often due to repeated water exposure
+onychomycosis — a thickened, yellow-brown, crumbling, and opaque nail, often starting at the distal or lateral edge
+nail psoriasis — nail pitting, separation of the nail from its bed, 'oil-drop' discoloration, and debris under the nail
+
+
+# ════════════════════════════════════════════════════════════════════════════
+#  SECTION 15: VASCULAR AND METABOLIC
+# ════════════════════════════════════════════════════════════════════════════
+
+# CLIP anchor: scalp pattern + nail morphology
+telangiectases — fine, permanently dilated red blood vessels, like spider veins, on the face, cheeks, and nose
+livedo reticularis — a net-like, purple, mottled, lacy pattern on the skin, often made worse by cold temperatures
+stasis dermatitis — brown-pigmented lower leg with varicose veins, ankle swelling, and eczema-like symptoms
+necrobiosis lipoidica diabeticorum — a yellow, waxy, atrophic patch with visible blood vessels on the shin, often in diabetics
+erythema nodosum — bilateral, tender, painful red nodules on the shins that evolve to look like bruises
+calcinosis cutis — hard, white, gritty calcium deposits under the skin, often on the fingers and hands
+acrodermatitis enteropathica — a scaly, weeping rash around the mouth and on the hands and feet in an infant, caused by zinc deficiency
+porphyria cutanea tarda — fragile, blistering skin, small white cysts, scarring, and excessive hair on sun-exposed areas of the hands
+
+
+# ════════════════════════════════════════════════════════════════════════════
+#  SECTION 16: COMPLEX SPECIFIC CONDITIONS (FROM IMAGE DATASET)
+# ════════════════════════════════════════════════════════════════════════════
+
+# --- Rare / Specific conditions from user dataset ---
+disseminated actinic porokeratosis — multiple tiny, ring-shaped, atrophic patches with a distinct border on sun-exposed areas
+porokeratosis mibelli — a single large ring with an atrophic center and a raised, thread-like border
+lyme disease erythema migrans — an expanding, bulls-eye-shaped red rash with a central clearing, originating from a tick bite
+erythema annulare centrifugum — a slowly expanding ring with a trailing scale, without central clearing
+erythema elevatum diutinum — persistent, symmetric, red-purple, xanthoma-like plaques over the joints
+pityriasis rosea — an oval "herald patch" followed by a "Christmas tree" pattern of pink, scaly, oval patches on the trunk and arms
+pityriasis rubra pilaris PRP — salmon-orange, follicular, keratotic bumps that merge into plaques with islands of normal skin
+behcets disease — painful sores in the mouth, plus sores on the genitals, eye inflammation, and skin lesions
+factitial dermatitis — unusual, geometric, or bizarrely shaped lesions that are self-inflicted and do not match any known disease pattern
+neurotic excoriations — multiple linear or picked, crusted, and hyperpigmented lesions from compulsive picking
+halo nevus — a brown central mole surrounded by a perfectly circular halo of white, depigmented skin
+becker nevus — a flat or slightly raised, hairy, brown patch on the shoulder or chest of a young male
+epidermal nevus — a linear, warty, brown, verrucous streak that follows the lines of Blaschko, present from birth
+lentigo maligna — a very slowly enlarging, flat, irregularly pigmented brown patch on a sun-damaged cheek
+nevus sebaceous jadassohn — a linear, yellow-orange, waxy, hairless plaque on the scalp or face that becomes warty at puberty
+congenital melanocytic nevus — a large, brown mole with terminal hairs, present from birth
+spitz nevus — a smooth, pink to red, dome-shaped papule in a child or adolescent, with rapid growth
+dysplastic nevus — an asymmetric mole with irregular pigmentation and haphazard architecture that should be monitored for changes
+dermatomyositis — a heliotrope (purple-lilac) eyelid rash with Gottron's papules on the knuckles and nailfold abnormalities
+scleromyxedema — a diffuse, waxy induration of the skin with papular mucinosis, a generalized systemic myxedema
+mucinosis focal — grouped or confluent, translucent, gelatinous, skin-colored papules
+papillomatosis confluentes reticulate — brown, flat, warty papules with a reticular pattern on the chest and back
+langerhans cell histiocytosis — a seborrheic-like, purpuric rash on the scalp and groin with systemic involvement
+incontinentia pigmenti stage III — hyperpigmented, swirled streaks on the trunk that follow the lines of Blaschko, in a female infant
+behcets disease — pathergy-positive oral and genital ulcers, uveitis, erythema nodosum, and skin vasculitis
+sarcoidosis — violaceous, indurated lupus pernio nodules on the nose and cheeks, or annular facial papules with systemic involvement
+livedo racemosa — an irregular, broken, livedo pattern, a systemic vasculopathy
+neutrophilic dermatoses sweet syndrome — painful, edematous, red-purple plaques with fever and neutrophilia
+pyoderma gangrenosum — a rapidly enlarging, painful ulcer with a violaceous, undermined, ragged edge and a necrotic base
+granuloma annulare subcutaneous — a deep, soft, subcutaneous nodule near the joints in a child, with no overlying change
+necrobiosis lipoidica — a yellow, waxy, atrophic, shiny plaque with dilated telangiectasias on the shin
+calcinosis cutis CREST — hard, white calcium nodules on the fingertips and knuckles, a connective tissue disease
+lymphangioma circumscriptum — grouped, frog-spawn-like vesicular cysts filled with lymphatic fluid on the skin surface
+port wine stain mature — a dark purple, thickened, nodular port-wine stain in a mature adult, with a cobblestone surface
+stasis ulcer venous — a shallow, irregular ulcer on the medial lower leg with hemosiderin pigment and varicose veins
+drug eruption fixed — a single, dusky red-brown, oval patch that recurs at the same site with the same drug
+drug lichenoid eruption — widespread, lichenoid, violaceous papules from medication, lichen-planus-like
+erythroderma — universal, diffuse, red, exfoliative skin covering the whole body
+pemphigus foliaceus — superficial, flaccid blisters and erythematous scaling on the face, scalp, and chest, with no mucosal involvement
+lichen planus pemphigoides — tense blisters developing on lichen planus lesions
+dermatitis herpetiformis — intensely itchy, grouped, small vesicles on the elbows, knees, and buttocks, associated with gluten sensitivity
+linear IgA dermatosis — a "cluster of jewels" or grouped vesicles, with perilesional blistering
+bullous lupus — tense or flaccid blisters on UV-exposed sites in systemic lupus erythematosus
+
+
+# ════════════════════════════════════════════════════════════════════════════
+#  SECTION 17: TROPICAL AND NEGLECTED DISEASES (AFRICA-SPECIFIC)
+# ════════════════════════════════════════════════════════════════════════════
+
+yaws treponema — a soft, raspberry-like growth (mother yaw) on the leg, with smaller lesions nearby
+podoconiosis — bilateral, asymmetric, non-pitting swelling of the lower leg and foot, with mossy skin, from walking on mineral-rich soil
+nematode strongyloides — a rapidly moving, snake-like, itchy rash
+onchocerciasis — intensely itchy, thickened, rough, depigmented skin, with bumps under the skin
+loiasis loa loa — transient swelling of the wrist or eye, with a visible worm moving across the white of the eye
+lymphatic filariasis bancroftian — massive, grotesque swelling of a lower limb, with thickened, warty skin
+Buruli ulcer endemic — a painless, slowly enlarging, necrotic ulcer with a wide, undermined edge, common in rural Africa
+leprosy nerve damage — a single, light-colored patch that is completely numb, with visibly thickened peripheral nerves
+yaws early — a raspberry-like growth on the leg of a child
+treponema yaws secondary — a widespread, scaly rash with crab-like scaling on the palms and soles
+acne — a typical clinical presentation of acne
+acquired autoimmune bullous diseaseherpes gestationis — a typical clinical presentation of autoimmune blistering disease
+allergic contact dermatitis — a typical clinical presentation of allergic contact dermatitis
+basal cell carcinoma — a typical clinical presentation of basal cell carcinoma
+basal cell carcinoma morpheiform — a typical clinical presentation of morpheaform basal cell carcinoma
+cheilitis — a typical clinical presentation of cheilitis
+drug eruption — a typical clinical presentation of a drug eruption
+drug induced pigmentary changes — a typical clinical presentation of drug-induced pigmentary changes
+dyshidrotic eczema — a typical clinical presentation of dyshidrotic eczema
+eczema — a typical clinical presentation of eczema
+erythema annulare centrifigum — a typical clinical presentation of erythema annulare centrifugum
+fixed eruptions — a typical clinical presentation of a fixed eruption
+granuloma pyogenic — a typical clinical presentation of pyogenic granuloma
+hidradenitis — a typical clinical presentation of hidradenitis
+lichen amyloidosis — a typical clinical presentation of lichen amyloidosis
+lichen simplex — a typical clinical presentation of lichen simplex
+lupus erythematosus — a typical clinical presentation of lupus erythematosus
+lupus subacute — a typical clinical presentation of subacute lupus
+lyme disease — a typical clinical presentation of Lyme disease
+malignant melanoma — a typical clinical presentation of malignant melanoma
+melanoma — a typical clinical presentation of melanoma
+mucinosis — a typical clinical presentation of mucinosis
+mucous cyst — a typical clinical presentation of a mucous cyst
+mycosis fungoides — a typical clinical presentation of mycosis fungoides
+naevus comedonicus — a typical clinical presentation of nevus comedonicus
+nematode infection — a typical clinical presentation of a nematode infection
+neurodermatitis — a typical clinical presentation of neurodermatitis
+neutrophilic dermatoses — a typical clinical presentation of a neutrophilic dermatosis
+nevocytic nevus — a typical clinical presentation of a nevocytic nevus
+nevus sebaceous of jadassohn — a typical clinical presentation of nevus sebaceous of Jadassohn
+papilomatosis confluentes and reticulate — a typical clinical presentation of confluent and reticulate papillomatosis
+paronychia — a typical clinical presentation of paronychia
+pediculosis lids — a typical clinical presentation of pediculosis of the eyelids
+photodermatoses — a typical clinical presentation of a photodermatosis
+pilar cyst — a typical clinical presentation of a pilar cyst
+pityriasis lichenoides chronica — a typical clinical presentation of pityriasis lichenoides chronica
+pityriasis rubra pilaris — a typical clinical presentation of pityriasis rubra pilaris
+porokeratosis actinic — a typical clinical presentation of actinic porokeratosis
+porokeratosis of mibelli — a typical clinical presentation of porokeratosis of Mibelli
+porphyria — a typical clinical presentation of porphyria
+psoriasis — a typical clinical presentation of psoriasis
+pustular psoriasis — a typical clinical presentation of pustular psoriasis
+rosacea — a typical clinical presentation of rosacea
+scleroderma — a typical clinical presentation of scleroderma
+solid cystic basal cell carcinoma — a typical clinical presentation of solid cystic basal cell carcinoma
+stasis edema — a typical clinical presentation of stasis edema
+stevens johnson syndrome — a typical clinical presentation of Stevens-Johnson syndrome
+striae — a typical clinical presentation of striae
+sun damaged skin — a typical clinical presentation of sun-damaged skin
+superficial spreading melanoma ssm — a typical clinical presentation of superficial spreading melanoma
+tick bite — a typical clinical presentation of a tick bite
+tungiasis — a typical clinical presentation of tungiasis
+urticaria — a typical clinical presentation of urticaria
+urticaria pigmentosa — a typical clinical presentation of urticaria pigmentosa
+xanthomas — a typical clinical presentation of xanthomas

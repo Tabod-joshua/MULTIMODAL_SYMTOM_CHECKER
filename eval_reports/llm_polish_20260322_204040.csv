@@ -1,0 +1,11 @@
+condition,latency_ms,accepted,failure_reason,raw_length,polished_length
+Basal Cell,10051.7,True,,451,854
+Neurodermatitis Lichen Simplex,8010.2,False,Diagnosis drift: 'neurodermatitis' missing,469,763
+Neurofibromatosis,10694.4,True,,505,1098
+Calcinosis Cutis,8924.0,True,,401,838
+Livedo Reticularis,6135.4,True,,208,525
+Dysplastic Nevus,9877.8,True,,344,974
+Pilomatricoma,8972.7,True,,382,717
+Behcets Disease,8514.2,True,,375,871
+Port Wine Stain,11417.2,True,,479,982
+Urticaria Hives,10249.7,True,,429,901

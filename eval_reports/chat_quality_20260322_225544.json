@@ -1,0 +1,90 @@
+[
+  {
+    "question": "Is this condition contagious?",
+    "reply_length": 705,
+    "latency_ms": 6905.9,
+    "status": "ok",
+    "looping": false,
+    "fallback": false,
+    "truncated": false,
+    "too_short": false,
+    "has_disclaimer": true
+  },
+  {
+    "question": "Can I treat this at home with an over-the-counter cream?",
+    "reply_length": 1508,
+    "latency_ms": 14016.1,
+    "status": "warn",
+    "looping": false,
+    "fallback": false,
+    "truncated": true,
+    "too_short": false,
+    "has_disclaimer": true
+  },
+  {
+    "question": "What are the main causes of this condition?",
+    "reply_length": 1312,
+    "latency_ms": 14848.3,
+    "status": "warn",
+    "looping": false,
+    "fallback": false,
+    "truncated": true,
+    "too_short": false,
+    "has_disclaimer": true
+  },
+  {
+    "question": "How long does it usually take to heal?",
+    "reply_length": 1455,
+    "latency_ms": 15980.3,
+    "status": "ok",
+    "looping": false,
+    "fallback": false,
+    "truncated": false,
+    "too_short": false,
+    "has_disclaimer": true
+  },
+  {
+    "question": "What should I avoid doing while I have this?",
+    "reply_length": 1401,
+    "latency_ms": 15804.8,
+    "status": "warn",
+    "looping": false,
+    "fallback": false,
+    "truncated": true,
+    "too_short": false,
+    "has_disclaimer": true
+  },
+  {
+    "question": "When should I go to the emergency room?",
+    "reply_length": 1384,
+    "latency_ms": 15661.7,
+    "status": "warn",
+    "looping": false,
+    "fallback": false,
+    "truncated": true,
+    "too_short": false,
+    "has_disclaimer": true
+  },
+  {
+    "question": "Can this condition spread to other parts of my body?",
+    "reply_length": 1229,
+    "latency_ms": 15806.0,
+    "status": "warn",
+    "looping": false,
+    "fallback": false,
+    "truncated": true,
+    "too_short": false,
+    "has_disclaimer": true
+  },
+  {
+    "question": "Is this condition linked to my diet or stress?",
+    "reply_length": 1462,
+    "latency_ms": 16434.9,
+    "status": "warn",
+    "looping": false,
+    "fallback": false,
+    "truncated": true,
+    "too_short": false,
+    "has_disclaimer": true
+  }
+]

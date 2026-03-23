@@ -1,0 +1,11 @@
+condition,latency_ms,accepted,failure_reason,raw_length,polished_length
+Seborrheic Dermatitis,9314.7,True,,486,878
+Milia,9440.4,True,,446,817
+Nevus Sebaceous Jadassohn,8865.7,True,,393,824
+Linear Iga Dermatosis,7928.7,True,,188,720
+Tinea Cruris,9119.4,True,,488,766
+Stasis Ulcer Venous,6280.8,True,,194,589
+Candidiasis,7959.3,True,,496,747
+Tuberous Sclerosis,15516.0,True,,507,1496
+Lupus Subacute,8771.4,True,,422,777
+Dermatomyositis,9267.2,True,,457,862

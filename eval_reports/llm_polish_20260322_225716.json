@@ -1,0 +1,82 @@
+[
+  {
+    "condition": "Seborrheic Dermatitis",
+    "latency_ms": 9314.7,
+    "accepted": true,
+    "failure_reason": null,
+    "raw_length": 486,
+    "polished_length": 878
+  },
+  {
+    "condition": "Milia",
+    "latency_ms": 9440.4,
+    "accepted": true,
+    "failure_reason": null,
+    "raw_length": 446,
+    "polished_length": 817
+  },
+  {
+    "condition": "Nevus Sebaceous Jadassohn",
+    "latency_ms": 8865.7,
+    "accepted": true,
+    "failure_reason": null,
+    "raw_length": 393,
+    "polished_length": 824
+  },
+  {
+    "condition": "Linear Iga Dermatosis",
+    "latency_ms": 7928.7,
+    "accepted": true,
+    "failure_reason": null,
+    "raw_length": 188,
+    "polished_length": 720
+  },
+  {
+    "condition": "Tinea Cruris",
+    "latency_ms": 9119.4,
+    "accepted": true,
+    "failure_reason": null,
+    "raw_length": 488,
+    "polished_length": 766
+  },
+  {
+    "condition": "Stasis Ulcer Venous",
+    "latency_ms": 6280.8,
+    "accepted": true,
+    "failure_reason": null,
+    "raw_length": 194,
+    "polished_length": 589
+  },
+  {
+    "condition": "Candidiasis",
+    "latency_ms": 7959.3,
+    "accepted": true,
+    "failure_reason": null,
+    "raw_length": 496,
+    "polished_length": 747
+  },
+  {
+    "condition": "Tuberous Sclerosis",
+    "latency_ms": 15516.0,
+    "accepted": true,
+    "failure_reason": null,
+    "raw_length": 507,
+    "polished_length": 1496
+  },
+  {
+    "condition": "Lupus Subacute",
+    "latency_ms": 8771.4,
+    "accepted": true,
+    "failure_reason": null,
+    "raw_length": 422,
+    "polished_length": 777
+  },
+  {
+    "condition": "Dermatomyositis",
+    "latency_ms": 9267.2,
+    "accepted": true,
+    "failure_reason": null,
+    "raw_length": 457,
+    "polished_length": 862
+  }
+]

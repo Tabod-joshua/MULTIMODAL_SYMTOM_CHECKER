@@ -1,0 +1,82 @@
+[
+  {
+    "condition": "Basal Cell",
+    "latency_ms": 10051.7,
+    "accepted": true,
+    "failure_reason": null,
+    "raw_length": 451,
+    "polished_length": 854
+  },
+  {
+    "condition": "Neurodermatitis Lichen Simplex",
+    "latency_ms": 8010.2,
+    "accepted": false,
+    "failure_reason": "Diagnosis drift: 'neurodermatitis' missing",
+    "raw_length": 469,
+    "polished_length": 763
+  },
+  {
+    "condition": "Neurofibromatosis",
+    "latency_ms": 10694.4,
+    "accepted": true,
+    "failure_reason": null,
+    "raw_length": 505,
+    "polished_length": 1098
+  },
+  {
+    "condition": "Calcinosis Cutis",
+    "latency_ms": 8924.0,
+    "accepted": true,
+    "failure_reason": null,
+    "raw_length": 401,
+    "polished_length": 838
+  },
+  {
+    "condition": "Livedo Reticularis",
+    "latency_ms": 6135.4,
+    "accepted": true,
+    "failure_reason": null,
+    "raw_length": 208,
+    "polished_length": 525
+  },
+  {
+    "condition": "Dysplastic Nevus",
+    "latency_ms": 9877.8,
+    "accepted": true,
+    "failure_reason": null,
+    "raw_length": 344,
+    "polished_length": 974
+  },
+  {
+    "condition": "Pilomatricoma",
+    "latency_ms": 8972.7,
+    "accepted": true,
+    "failure_reason": null,
+    "raw_length": 382,
+    "polished_length": 717
+  },
+  {
+    "condition": "Behcets Disease",
+    "latency_ms": 8514.2,
+    "accepted": true,
+    "failure_reason": null,
+    "raw_length": 375,
+    "polished_length": 871
+  },
+  {
+    "condition": "Port Wine Stain",
+    "latency_ms": 11417.2,
+    "accepted": true,
+    "failure_reason": null,
+    "raw_length": 479,
+    "polished_length": 982
+  },
+  {
+    "condition": "Urticaria Hives",
+    "latency_ms": 10249.7,
+    "accepted": true,
+    "failure_reason": null,
+    "raw_length": 429,
+    "polished_length": 901
+  }
+]

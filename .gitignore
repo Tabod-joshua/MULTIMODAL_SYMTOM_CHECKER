@@ -5,7 +5,4 @@ __pycache__/
 .ipynb_checkpoints/
 .DS_Store
 .env
-eval_reports/*.json
-eval_reports/*.csv
-eval_reports/*.png
-eval_reports/*.webp
+

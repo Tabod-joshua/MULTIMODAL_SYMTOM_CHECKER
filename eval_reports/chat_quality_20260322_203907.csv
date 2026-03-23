@@ -1,0 +1,9 @@
+question,reply_length,latency_ms,status,looping,fallback,truncated,too_short,has_disclaimer
+Is this condition contagious?,496,5598.3,ok,False,False,False,False,True
+Can I treat this at home with an over-the-counter cream?,919,9641.3,ok,False,False,False,False,True
+What are the main causes of this condition?,757,7558.3,ok,False,False,False,False,True
+How long does it usually take to heal?,812,8975.4,ok,False,False,False,False,True
+What should I avoid doing while I have this?,1150,12753.1,ok,False,False,False,False,True
+When should I go to the emergency room?,1299,13548.9,ok,False,False,False,False,True
+Can this condition spread to other parts of my body?,1440,16004.5,warn,False,False,True,False,True
+Is this condition linked to my diet or stress?,1346,17993.6,warn,False,False,True,False,True
